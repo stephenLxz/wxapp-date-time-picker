@@ -131,7 +131,7 @@ Component({
         if (startMonth === endMonth) {
           for (let day = startDay; day <= endDay; day++) {
             time = new Date(startYear, startMonth, day)
-            dateArr.push({ name: startYear === nowYear ? utils.formatTime(time, '{m}月{d}日周{a}') : utils.formatTime(time, '{y}-{m}-{d}'), value: time })
+            dateArr.push({ name: startYear === nowYear ? utils.formatTime(time, '{m}月{d}日周{a}') : utils.formatTime(time, '{y}年{m}月{d}日周{a}'), value: time })
           }
         } else {
           // 不同月
@@ -143,7 +143,7 @@ Component({
 
             for (let day = tmpDay; day <= days; day++) {
               time = new Date(startYear, month, day)
-              dateArr.push({ name: startYear === nowYear ? utils.formatTime(time, '{m}月{d}日周{a}') : utils.formatTime(time, '{y}-{m}-{d}'), value: time })
+              dateArr.push({ name: startYear === nowYear ? utils.formatTime(time, '{m}月{d}日周{a}') : utils.formatTime(time, '{y}年{m}月{d}日周{a}'), value: time })
 
               // 处理边界（日）
               day === days && (tmpDay = 1)
@@ -163,7 +163,7 @@ Component({
 
             for (let day = tmpDay; day <= days; day++) {
               time = +new Date(year, month, day)
-              dateArr.push({ name: year === nowYear ? utils.formatTime(time, '{m}月{d}日周{a}') : utils.formatTime(time, '{y}-{m}-{d}'), value: time })
+              dateArr.push({ name: year === nowYear ? utils.formatTime(time, '{m}月{d}日周{a}') : utils.formatTime(time, '{y}年{m}月{d}日周{a}'), value: time })
 
               // 处理边界（日）
               day === days && (tmpDay = 1)

@@ -6,7 +6,7 @@
       <view class="selector-panel selector-panel-date">
         <picker-view indicator-style="height: 55px;" mode="selector" value="{{ [dateIndex] }}" class="selector-picker" bindchange="dateChange" bindpickstart="bindpickstart" bindpickend="bindpickend">
           <picker-view-column>
-            <view wx:for="{{ dateArr }}" wx:key="index" class="selector-item">{{ item.name }}</view>
+            <view wx:for="{{ dateArr }}" wx:key="index" class="selector-item selector-item-date">{{ item.name }}</view>
           </picker-view-column>
         </picker-view>
       </view>

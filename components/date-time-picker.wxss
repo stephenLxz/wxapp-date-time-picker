@@ -38,6 +38,10 @@
   text-align: center;
 }
 
+.selector-item-date{
+  font-size: 16px;
+}
+
 .oper-btn {
   width: 45% !important;
   height: 40px !important;
