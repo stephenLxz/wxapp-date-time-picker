@@ -1,0 +1,36 @@
+<!--components/date-time-picker.wxml-->
+<mp-half-screen-dialog show="{{ show }}" maskClosable="{{ false }}" closabled="{{ false }}" extClass="date-time-dialog" catchtouchmove="preventTouchMove" bindclose="bindclose">
+  <view slot="desc" class="date-time-container">
+    <view class="date-time-body">
+      <!-- 日期 -->
+      <view class="selector-panel selector-panel-date">
+        <picker-view indicator-style="height: 55px;" mode="selector" value="{{ [dateIndex] }}" class="selector-picker" bindchange="dateChange" bindpickstart="bindpickstart" bindpickend="bindpickend">
+          <picker-view-column>
+            <view wx:for="{{ dateArr }}" wx:key="index" class="selector-item">{{ item.name }}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+      <!-- 小时 -->
+      <view class="selector-panel">
+        <picker-view indicator-style="height: 55px;" mode="selector" value="{{ [hourValue] }}" class="selector-picker" bindchange="hourChange" bindpickstart="bindpickstart" bindpickend="bindpickend">
+          <picker-view-column>
+            <view wx:for="{{ hourArr }}" wx:key="index" class="selector-item">{{ item }}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+      <!-- 分钟 -->
+      <view class="selector-panel">
+        <picker-view indicator-style="height: 55px;" mode="selector" value="{{ [minValue] }}" class="selector-picker" bindchange="minChange" bindpickstart="bindpickstart" bindpickend="bindpickend">
+          <picker-view-column>
+            <view wx:for="{{ minArr }}" wx:key="index" class="selector-item">{{ item }}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+
+    <view class="date-time-oper">
+      <button type="default" class="weui-btn oper-btn" bindtap="bindclose">取消</button>
+      <button type="primary" class="weui-btn oper-btn" bindtap="handleSubmit" disabled="{{ disabled }}">确定</button>
+    </view>
+  </view>
+</mp-half-screen-dialog>

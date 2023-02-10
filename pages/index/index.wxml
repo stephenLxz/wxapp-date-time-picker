@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="page">
+  <button class="btn" bindtap="showPicker">日期时间选择器</button>
+
+  <date-time-picker show="{{ show }}" bindchange="handleChange" />
+</view>

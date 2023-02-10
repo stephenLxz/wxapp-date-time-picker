@@ -1,0 +1,44 @@
+/* components/date-time-picker.wxss */
+.date-time-container {
+  min-height: 350px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.date-time-body {
+  width: 100% !important;
+  display: flex;
+  flex: auto;
+}
+
+.date-time-oper {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selector-panel {
+  width: 80px;
+  display: flex;
+  align-items: center;
+}
+.selector-panel-date {
+  flex: auto;
+}
+
+.selector-picker {
+  width: 100%;
+  height: 80%;
+  font-size: 24px;
+}
+
+.selector-item {
+  line-height: 50px !important;
+  text-align: center;
+}
+
+.oper-btn {
+  width: 45% !important;
+  height: 40px !important;
+}

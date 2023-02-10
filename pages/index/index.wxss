@@ -1,0 +1,8 @@
+/**index.wxss**/
+page {
+  background-color: #ddd;
+}
+.btn{
+  color: #185dad;
+  margin-top: 30px;
+}

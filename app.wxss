@@ -1,0 +1,24 @@
+/**app.wxss**/
+
+/*--- weui-half-screen-dialog .date-time-dialog 此类可避免更改所有half-screen-dialog样式 -------------------- */
+.weui-half-screen-dialog .date-time-dialog {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.date-time-dialog .weui-half-screen-dialog__bd {
+  height: calc(100% - 8em);
+  overflow-y: scroll;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-x: hidden;
+}
+
+.date-time-dialog .weui-half-screen-dialog__hd,
+.date-time-dialog .weui-half-screen-dialog__ft {
+  height: 0;
+}
+
+.date-time-dialog .weui-half-screen-dialog__ft {
+  padding: 0;
+}
